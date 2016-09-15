@@ -4,17 +4,27 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_explode</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_asteroids</sprite>
     <sprite>sprites\spr_asteroid_s</sprite>
+    <sprites name="spr_dead">
+      <sprite>sprites\spr_ship_dead</sprite>
+      <sprite>sprites\spr_ship_dead2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_spacefield</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_weapons_off.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
     <object>objects\obj_bullet</object>
@@ -22,6 +32,11 @@
     <object>objects\obj_asteroid_s</object>
     <object>objects\obj_score</object>
     <object>objects\obj_debug</object>
+    <object>objects\obj_spawner</object>
+    <objects name="obj_dead">
+      <object>objects\obj_ship_dead</object>
+      <object>objects\obj_ship_dead2</object>
+    </objects>
   </objects>
   <timelines name="timelines"/>
   <rooms name="rooms">

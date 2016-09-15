@@ -150,14 +150,31 @@
             <kind>1</kind>
             <string>var bullet;
 var bullet2;
-{
-    //Create bullet
-    bullet = instance_create(x,y,obj_bullet);
-    //Guide bullet
-    bullet.direction = image_angle;
-    bullet.image_angle = image_angle;
-    bullet.speed = 15;
-}
+
+if(global.shotgun = false)
+    {
+        //Create bullet
+        bullet = instance_create(x,y,obj_bullet);
+        //Guide bullet
+        bullet.direction = image_angle;
+        bullet.image_angle = image_angle;
+        bullet.speed = 15;
+    }
+else
+    {
+        //Create 2 bullets
+        bullet = instance_create(x,y,obj_bullet);
+        bullet2 = instance_create(x,y,obj_bullet);
+        //Guide bullet
+        bullet.direction = image_angle+1;
+        bullet2.direction = image_angle-1;
+        bullet.image_angle = image_angle+1;
+        bullet2.image_angle = image_angle-1;
+        bullet.speed = 15;
+        bullet2.speed = 15;
+    }
+    
+audio_play_sound(snd_shoot,0,0);
 </string>
           </argument>
         </arguments>
